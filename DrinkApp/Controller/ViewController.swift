@@ -45,7 +45,7 @@ class ViewController: UIViewController{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
-    //wfchhj
+    
     func IntroAlert(message: String) {
         if (isAlert) { } else {
             let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
