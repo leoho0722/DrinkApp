@@ -1,2 +1,4 @@
 
 .DS_Store
+DrinkApp/GoogleService-Info.plist
+Podfile.lock
