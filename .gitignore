@@ -3,5 +3,3 @@
 DrinkApp/GoogleService-Info.plist
 DrinkApp/Pods/
 Podfile.lock
-Pods/Firebase/CoreOnly/Sources/Firebase.h
-Pods/Firebase/CoreOnly/Sources/module.modulemap
