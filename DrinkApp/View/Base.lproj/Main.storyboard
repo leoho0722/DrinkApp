@@ -16,14 +16,58 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入使用者帳號" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="teu-f3-pIy">
+                                <rect key="frame" x="16" y="157.5" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="請輸入使用者密碼" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xTj-ia-QRo">
+                                <rect key="frame" x="16" y="199.5" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FaA-Cg-KZS">
+                                <rect key="frame" x="16" y="242" width="31" height="30"/>
+                                <state key="normal" title="註冊"/>
+                                <connections>
+                                    <action selector="registerAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HaX-6N-A18"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TGS-we-fZ4">
+                                <rect key="frame" x="328" y="242" width="31" height="30"/>
+                                <state key="normal" title="登入"/>
+                                <connections>
+                                    <action selector="signInAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="div-Yd-7cO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="teu-f3-pIy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="111-tr-Knt"/>
+                            <constraint firstItem="FaA-Cg-KZS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="53d-bO-6ZA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="teu-f3-pIy" secondAttribute="trailing" constant="16" id="DDU-DK-i8a"/>
+                            <constraint firstItem="xTj-ia-QRo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EKQ-bm-vIb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xTj-ia-QRo" secondAttribute="trailing" constant="16" id="Eb9-ig-yzM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TGS-we-fZ4" secondAttribute="bottom" constant="346" id="Mad-4F-n1u"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FaA-Cg-KZS" secondAttribute="bottom" constant="346" id="c9h-Ma-BKm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TGS-we-fZ4" secondAttribute="trailing" constant="16" id="cKJ-qu-TWe"/>
+                            <constraint firstItem="xTj-ia-QRo" firstAttribute="top" secondItem="teu-f3-pIy" secondAttribute="bottom" constant="8" symbolic="YES" id="crV-yB-52z"/>
+                            <constraint firstItem="TGS-we-fZ4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FaA-Cg-KZS" secondAttribute="trailing" constant="8" symbolic="YES" id="oX9-by-oU3"/>
+                            <constraint firstItem="teu-f3-pIy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113.5" id="sHH-Km-NbP"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="wtc-th-OHf"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black"/>
+                    <connections>
+                        <outlet property="accTF" destination="teu-f3-pIy" id="dgs-3S-1Zg"/>
+                        <outlet property="pwTF" destination="xTj-ia-QRo" id="oHS-92-e3v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="367"/>
+            <point key="canvasLocation" x="789.60000000000002" y="366.56671664167919"/>
         </scene>
         <!--再睡5分鐘-->
         <scene sceneID="X2i-o1-zMC">
@@ -67,18 +111,11 @@
                                 <action selector="refreshTableView:" destination="gca-7o-OVX" id="ITN-Pc-miD"/>
                             </connections>
                         </barButtonItem>
-                        <rightBarButtonItems>
-                            <barButtonItem style="done" systemItem="add" id="N2l-76-RZ6">
-                                <connections>
-                                    <segue destination="Uh8-Mj-KEP" kind="presentation" id="gY2-KX-l63"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem style="plain" systemItem="save" id="FfZ-a7-iiO">
-                                <connections>
-                                    <action selector="updateDrinkData:" destination="gca-7o-OVX" id="HBu-e6-IKp"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="N2l-76-RZ6">
+                            <connections>
+                                <segue destination="Uh8-Mj-KEP" kind="presentation" id="gY2-KX-l63"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5pw-sC-oLY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

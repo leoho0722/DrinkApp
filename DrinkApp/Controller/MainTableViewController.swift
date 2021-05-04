@@ -170,10 +170,6 @@ class MainTableViewController: UITableViewController {
         self.alert(message: "品項已更新完畢！")
     }
     
-    @IBAction func updateDrinkData(_ sender: UIButton) {
-        
-    }
-    
     //取得該產品的 Primary Key
     func getProductPrimaryKey() {
         let realm = try! Realm()
@@ -214,81 +210,17 @@ class MainTableViewController: UITableViewController {
         present(alertController,animated: true)
     }
     
-    func updateProductFromRealm() {
-        switch seriesSection {
-        case 0:
-            self.updateFromLeftDrinkOLa()
-        case 1:
-            self.updateFromDrinkHugeMilkCover()
-        case 2:
-            self.updateFromDrinkBBOLa()
-        case 3:
-            self.updateFromDrinkNativeTea()
-        case 4:
-            self.updateFromBrandLimit()
-        case 5:
-            self.updateFromDrinkMilk()
-        case 6:
-            self.updateFromDrinkHot()
-        case 7:
-            self.updateFromCreatorFeat()
-        default:
-            self.alert(message: "產品更新失敗！")
-        }
-    }
-    
-    func updateFromLeftDrinkOLa() {
-        
-    }
-    
-    func updateFromDrinkHugeMilkCover() {
-        
-    }
-    
-    func updateFromDrinkBBOLa() {
-        
-    }
-    
-    func updateFromDrinkNativeTea() {
-        
-    }
-    
-    func updateFromBrandLimit() {
-        
-    }
-    
-    func updateFromDrinkMilk() {
-        
-    }
-    
-    func updateFromDrinkHot() {
-        
-    }
-    
-    func updateFromCreatorFeat() {
-        
-    }
-    
     func deleteProductFromRealm() {
         switch seriesSection {
-        case 0:
-            self.delFromLeftDrinkOLa()
-        case 1:
-            self.delFromDrinkHugeMilkCover()
-        case 2:
-            self.delFromDrinkBBOLa()
-        case 3:
-            self.delFromDrinkNativeTea()
-        case 4:
-            self.delFromBrandLimit()
-        case 5:
-            self.delFromDrinkMilk()
-        case 6:
-            self.delFromDrinkHot()
-        case 7:
-            self.delFromCreatorFeat()
-        default:
-            self.alert(message: "產品刪除失敗！")
+        case 0: self.delFromLeftDrinkOLa()
+        case 1: self.delFromDrinkHugeMilkCover()
+        case 2: self.delFromDrinkBBOLa()
+        case 3: self.delFromDrinkNativeTea()
+        case 4: self.delFromBrandLimit()
+        case 5: self.delFromDrinkMilk()
+        case 6: self.delFromDrinkHot()
+        case 7: self.delFromCreatorFeat()
+        default: self.alert(message: "產品刪除失敗！")
         }
     }
     
@@ -356,7 +288,6 @@ class MainTableViewController: UITableViewController {
         }
     }
 }
-
 
 /*
  ("躺著喝歐蕾",["日安紅歐蕾 (濃茶)","日安紅歐蕾 (厚奶)","午茉綠歐蕾","四季金萱歐蕾","鐵觀音歐蕾"]),
