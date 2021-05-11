@@ -129,7 +129,7 @@ class MainTableViewController: UITableViewController {
             self.seriesSection = indexPath.section
             DispatchQueue.main.async {
                 self.getProductPrimaryKey()
-                
+                self.updateData()
             }
             completeHandler(true)
         }
@@ -200,6 +200,12 @@ class MainTableViewController: UITableViewController {
             if (id.count > 0) { self.productPrimaryKey = id[self.productIndexPathRow].id }
         default:
             self.alert(message: "無法取得 Primary Key！")
+        }
+    }
+    
+    func updateData() {
+        if let controller = storyboard?.instantiateViewController(identifier: "AddProductPage") as? AddProductViewController {
+            self.present(controller, animated: true)
         }
     }
     

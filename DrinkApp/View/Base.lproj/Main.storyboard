@@ -125,7 +125,7 @@
         <!--Add Product View Controller-->
         <scene sceneID="mH8-9v-g32">
             <objects>
-                <viewController id="Uh8-Mj-KEP" customClass="AddProductViewController" customModule="DrinkApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddProductPage" id="Uh8-Mj-KEP" customClass="AddProductViewController" customModule="DrinkApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dAC-kx-CHF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
